@@ -17,25 +17,37 @@ export default function Home() {
       <section className={s.whyDonate}>
         <h2 className={s.textWhyDonate}>Por que devo doar? </h2>
         <article className={s.reasonDonate}>
-          <figure>
-            <img src={community} alt="símbolos que representam pessoas" />
-            <figcaption>
+          <figure className={s.figureReasonDonate}>
+            <img
+              src={community}
+              alt="símbolos que representam pessoas"
+              className={s.imgFigurerReasonDonate}
+            />
+            <figcaption className={s.figcaptionImgFigurerReasonDonate}>
               Oferece livros a quem não tem acesso, ajudando a reduzir a
               exclusão social.
             </figcaption>
           </figure>
         </article>
         <article className={s.reasonDonate}>
-          <figure>
-            <img src={reading} alt="Símbolo que representa leitura" />
+          <figure className={s.figureReasonDonate}>
+            <img
+              src={reading}
+              alt="Símbolo que representa leitura"
+              className={s.imgFigurerReasonDonate}
+            />
             <figcaption>
               Estimula o hábito da leitura e o aprendizado contínuo.
             </figcaption>
           </figure>
         </article>
         <article className={s.reasonDonate}>
-          <figure>
-            <img src={transform} alt="símbolo de transformação" />
+          <figure className={s.figureReasonDonate}>
+            <img
+              src={transform}
+              alt="símbolo de transformação"
+              className={s.imgFigurerReasonDonate}
+            />
             <figcaption>
               Fornece conhecimento e inspiração, permitindo que indivíduos
               transformem suas vidas.
@@ -43,8 +55,12 @@ export default function Home() {
           </figure>
         </article>
         <article className={s.reasonDonate}>
-          <figure>
-            <img src={balance} alt="Símbolo de uma balança" />
+          <figure className={s.figureReasonDonate}>
+            <img
+              src={balance}
+              alt="Símbolo de uma balança"
+              className={s.imgFigurerReasonDonate}
+            />
             <figcaption>
               Garante que todos, independentemente de sua condição, tenham
               oportunidades de aprendizado.

@@ -42,15 +42,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    figure {
-      img {
+    .figureReasonDonate {
+      .imgFigurerReasonDonate {
         max-width: 100px;
       }
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      figcaption {
+      .figcaptionImgFigurerReasonDonate {
         margin-top: 0.4rem;
         text-align: center;
       }
