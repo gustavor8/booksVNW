@@ -1,0 +1,59 @@
+.imageInital {
+  height: 20rem;
+  min-width: 100vw;
+  background-image: url("../../assets/img/imageInitialHome.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  .textInitial {
+    color: white;
+    width: 18rem;
+    padding-left: 4rem;
+  }
+}
+
+.whyDonate {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .textWhyDonate {
+    width: 100%;
+    margin-left: 6.5rem;
+    padding: 1rem;
+    color: #005695;
+  }
+  .reasonDonate {
+    background-color: #0157944d;
+    padding: 1.5em;
+    height: 15rem;
+    width: 15rem;
+    word-wrap: break-word;
+    max-width: 100%;
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa */
+    text-overflow: ellipsis; /* Adiciona reticências caso o texto ultrapasse */
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    figure {
+      img {
+        max-width: 100px;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      figcaption {
+        margin-top: 0.4rem;
+        text-align: center;
+      }
+    }
+  }
+}
