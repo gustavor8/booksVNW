@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 import headerBooks from "../../assets/img/headerBooks.png";
@@ -8,6 +8,7 @@ import s from "./header.module.scss";
 
 export default function Header() {
   const [searchText, setSearchText] = useState("");
+  const location = useLocation(); // Obter a rota atual
 
   const searchBooks = (event) => {
     event.preventDefault();
@@ -27,12 +28,22 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/" className={s.menuItem}>
+            <Link
+              to="/"
+              className={`${s.menuItem} ${
+                location.pathname === "/" ? s.active : ""
+              }`}
+            >
               Início
             </Link>
           </li>
           <li>
-            <Link to="/livrosdoados" className={s.menuItem}>
+            <Link
+              to="/livrosdoados"
+              className={`${s.menuItem} ${
+                location.pathname === "/livrosdoados" ? s.active : ""
+              }`}
+            >
               Livros Doados
             </Link>
           </li>
@@ -52,7 +63,10 @@ export default function Header() {
               </button>
             </form>
           </li>
-          <li className={s.buttonLi}>
+          <li
+            // prettier-ignore
+            className={`${s.buttonLi} ${location.pathname === "/querodoar" ? s.active : "" }`}
+          >
             <Link to="/querodoar">Quero Doar</Link>
           </li>
         </ul>
