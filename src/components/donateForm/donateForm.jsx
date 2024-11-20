@@ -46,8 +46,6 @@ export default function DonateForm() {
           name="imageLink"
           required
         />
-
-        {/* Botão de envio */}
         <button type="submit">Doar</button>
       </form>
     </div>

@@ -36,7 +36,7 @@ export default function Home() {
               alt="Símbolo que representa leitura"
               className={s.imgFigurerReasonDonate}
             />
-            <figcaption>
+            <figcaption className={s.figcaptionImgFigurerReasonDonate}>
               Estimula o hábito da leitura e o aprendizado contínuo.
             </figcaption>
           </figure>
@@ -48,7 +48,7 @@ export default function Home() {
               alt="símbolo de transformação"
               className={s.imgFigurerReasonDonate}
             />
-            <figcaption>
+            <figcaption className={s.figcaptionImgFigurerReasonDonate}>
               Fornece conhecimento e inspiração, permitindo que indivíduos
               transformem suas vidas.
             </figcaption>
@@ -61,7 +61,7 @@ export default function Home() {
               alt="Símbolo de uma balança"
               className={s.imgFigurerReasonDonate}
             />
-            <figcaption>
+            <figcaption className={s.figcaptionImgFigurerReasonDonate}>
               Garante que todos, independentemente de sua condição, tenham
               oportunidades de aprendizado.
             </figcaption>
