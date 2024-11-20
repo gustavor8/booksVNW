@@ -1,0 +1,27 @@
+.footer {
+  text-align: inherit;
+  color: white;
+  background-color: #005695;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0.2rem;
+
+  .infoFooter {
+    margin-left: 1rem;
+  }
+  .iconsSection {
+    margin-right: 1rem;
+    .icons {
+      padding: 0rem 0.5rem 0rem 0.5rem;
+      text-decoration: none;
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: yellow;
+      }
+    }
+  }
+}

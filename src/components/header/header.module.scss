@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0px;
 }
+
 header {
   background: linear-gradient(90deg, #001b2f, #005695);
   color: white;
@@ -11,9 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0px 1rem 0px 1rem;
-  min-width: 100vw;
   overflow-x: auto;
-  // max-height: 5rem;
 
   figure {
     display: flex;
