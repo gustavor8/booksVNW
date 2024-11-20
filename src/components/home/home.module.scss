@@ -56,3 +56,13 @@
     }
   }
 }
+
+@media (max-width: 675px) {
+  .whyDonate {
+    justify-content: center;
+    .textWhyDonate {
+      margin-left: 0rem;
+      text-align: center;
+    }
+  }
+}

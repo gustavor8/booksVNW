@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import headerBooks from "../../assets/img/headerBooks.png";
 import searchIcon from "../../assets/img/search.png";
@@ -8,8 +8,21 @@ import s from "./header.module.scss";
 
 export default function Header() {
   const [searchText, setSearchText] = useState("");
-  const location = useLocation(); // Obter a rota atual
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 675);
+  const location = useLocation();
+  // Atualiza o estado com base no redimensionamento da janela
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 674);
+    };
 
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup para evitar vazamento de memória
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const searchBooks = (event) => {
     event.preventDefault();
     console.log("Buscando por:", searchText);
@@ -47,7 +60,7 @@ export default function Header() {
               Livros Doados
             </Link>
           </li>
-          <li>
+          <li className={s.searchField}>
             <form
               onSubmit={searchBooks}
               style={{ display: "flex", alignItems: "center" }}
@@ -65,9 +78,18 @@ export default function Header() {
           </li>
           <li
             // prettier-ignore
-            className={`${s.buttonLi} ${location.pathname === "/querodoar" ? s.active : "" }`}
+            className={`${isMobile ? "": s.buttonLi} ${
+              location.pathname === "/querodoar" ? s.active : ""
+            }`}
           >
-            <Link to="/querodoar">Quero Doar</Link>
+            <Link
+              to="/querodoar"
+              className={`${isMobile ? s.menuItem : ""} ${
+                location.pathname === "/querodoar" ? s.active : ""
+              }`}
+            >
+              Quero Doar
+            </Link>
           </li>
         </ul>
       </nav>

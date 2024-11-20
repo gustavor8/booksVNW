@@ -36,6 +36,7 @@ header {
         display: flex;
         flex-wrap: wrap;
         margin-right: 0.6em;
+        text-align: center;
 
         a {
           text-decoration: none;
@@ -129,6 +130,25 @@ header {
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 675px) {
+  .searchField {
+    display: none;
+  }
+  header {
+    flex-direction: column;
+    figure img {
+      height: 2rem;
+    }
+    nav {
+      width: 100%;
+      padding-left: 0rem;
+      ul {
+        justify-content: space-evenly;
       }
     }
   }
